@@ -1,0 +1,10 @@
+.no_horny_vid {
+  position: absolute;
+  z-index: 100000000; /* Make sure its on top */
+  height: 100vh;
+  width: 100%;
+}
+
+.modify_body {
+  overflow: hidden !important;
+}

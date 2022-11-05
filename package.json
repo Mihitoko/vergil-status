@@ -6,7 +6,8 @@
   "scripts": {
     "watch": "webpack --mode=development --watch --config config/webpack.config.js",
     "build": "webpack --mode=production --config config/webpack.config.js",
-    "format": "prettier --write --ignore-unknown \"{config,public,src}/**/*.{html,css,js,ts,json}\""
+    "format": "prettier --write --ignore-unknown \"{config,extension/public,extension/src}/**/*.{html,css,js,ts,json}\"",
+    "build_server": "pyinstaller --noconfirm --onefile --console --add-data \"server/model.h5;.\" --distpath build/server server/main.py && rmdir /q /s \"build/main\""
   },
   "devDependencies": {
     "copy-webpack-plugin": "^10.2.4",
@@ -17,5 +18,7 @@
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
     "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
   }
 }
